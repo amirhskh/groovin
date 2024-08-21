@@ -1,0 +1,317 @@
+@use "layout";
+@use "font";
+@use "swiper";
+@use "number";
+
+$text             : #444444;
+$bg-white         : white;
+$bg-header         : rgb(18 18 18 / 86%);
+$text-green       : #5c9f24;
+    $bg-gray      : #444444;
+$bg-gray-1        : color-mix(in srgb, $bg-gray, transparent 97%);
+
+
+.header-fixed{
+    background-color: $bg-header;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    ul{
+        li{
+            a{
+                color: white;
+            }
+            a:hover{
+                
+                text-decoration: underline red;
+                //transition: 1s;
+            }
+        }
+    }
+}
+.parent-1{
+    position: relative;
+}
+.child-1{
+    display: none;
+   li{
+    padding-bottom: 1rem;
+    a{
+        color: $text !important; 
+    }
+    a:hover{
+        color: red !important;
+        text-decoration: none !important;
+        font-weight: 500 !important;
+    }
+   }
+   width: 11rem;
+   position: absolute;
+   top: 2rem;
+   right: -4rem;
+   background-color: #fff;
+   padding: 1rem;
+   border-radius: 5px;
+   border: 1px solid #ebebebcf;
+}
+
+.parent-2{
+    position: relative;
+}
+.child-2{
+    display: none;
+    position: absolute;
+    top: 0rem;
+    left: -10.3rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(235, 235, 235, .8117647059);
+    box-shadow: -1px 1px 19px 0px #cdcbcbad;
+   li{
+    padding-bottom: 1rem;
+    a{
+        color: $text !important; 
+    }
+   }
+}
+.parent-1:hover{
+    .child-1{
+        display: inline-block;
+    }
+}
+.parent-2:hover{
+    .child-2{
+        display: inline-block;
+    }
+}
+.bg-1{
+    background-image: url(../image/header-1.jpg);
+    background-size: contain;
+    color: white !important;
+    opacity: 1;
+   
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.h-1{
+    height: 640px;
+}
+.bg-2{
+    background-image: url(../image/header-2.jpg);
+    background-size: contain;
+    color: white !important;
+    opacity: 1;
+   
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.bg-3{
+    background-image: url(../image/header-3.jpg);
+    background-size: contain;
+    color: white !important;
+    opacity: 1;
+   
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+.next-1::after{
+   font-size: 2rem;
+   color: #b9b9b9;
+}
+.prev-1::after{
+    font-size: 2rem;
+    color: #b9b9b9;
+}
+.scrollbar-1{
+    background-color: white;
+}
+
+  .mt-10{
+    margin-top: 10rem;
+  }
+  .main-logo{
+    padding: 20px 40px;
+    max-width: 90%;
+    transition: 0.3s;
+    opacity: 0.5;
+    filter: grayscale(100);
+  }
+  .main-logo:hover{
+    filter: none;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .card-header-1{
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 7rem;
+    box-shadow: -1px 1px 8px 0px rgb(181 168 168 / 65%);
+    transform: translate(8rem);
+  }
+  .card-main-1{
+    border-bottom: 2px solid red;
+    width: 8rem;
+    transform: translate(7rem);
+  }
+  .card-1:hover{
+    .card-main-1{
+        span{
+            color: red !important;
+            transition: 0.5s;
+        }
+    }
+  }
+  .card-2{
+    padding: 50px 30px;
+    background: 
+   $bg-gray-1;
+    border-radius: 10px;
+    
+    span{
+        color: $text-green !important;
+    }
+  }
+  .card-2:hover{
+    background:$text-green ;
+    padding: 30px 30px 70px 30px;
+    transition: all ease-in-out 0.3s;
+    p{
+        color: $bg-white !important;
+    }
+    span{
+        color: $bg-white !important;
+    }
+  }
+  .bg-body-main{
+    background-color:  $bg-gray-1;
+  }
+  .a-hover:hover{
+    color: red !important;
+    transition: 0.2s;
+  }
+  .a-hover-green:hover{
+    color: green !important;
+    transition: 0.2s;
+  }
+  .card-3{
+    position: relative;
+    
+  }
+.card-4{ 
+    border-radius: 10px;
+    background-color: 
+    color-mix(in srgb, white, transparent 10%);
+        position: absolute;
+        top: 9rem;
+        right: 1rem;
+        display: none !important;
+        padding-top: 10px;
+      
+}
+.card-3:hover{
+    
+        
+    .card-4{
+        display: flex !important;
+        
+    }
+}
+.card-5{
+    position: relative;
+    
+}
+.card-6{
+    width: 16.3rem;
+    color: #fff !important;
+    background: rgba(0, 0, 0, .6);
+    opacity: 1;
+    transition: .4s;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100%;
+  
+    display: none !important;
+    
+}
+.card-5:hover{
+    .card-6{
+        display: inline-block !important;
+      
+       
+       
+    }
+}
+.translate{
+    transform: translate(0,6rem);
+  
+}
+.text-green{
+    color: $text-green !important;
+}
+.card-7{
+    background-color: white;
+    border: 1px solid #e9e9e9;
+   
+   
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px;
+    z-index: 91;
+}
+.card-7-1{
+    height: 34rem;
+   
+    background-color: #5c9f24;
+    color: #fff !important;
+    border: 1px solid #e9e9e9;
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, .1);
+    padding: 60px 40px;
+    z-index: 100;
+}
+.card-7-2{
+    background-color: white;
+    border: 1px solid #e9e9e9;
+   
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px;
+    z-index: 90;
+}
+.accordion-body {
+    background-color: #5c9f24;
+
+}
+.w-2{
+    width: 34rem;
+}
+.bg-black{
+    background-color: $bg-header;
+}
+.fs-7{
+    font-size: 10px;;
+}
+.bg-green{
+    background-color: $text-green;
+}
+.sticky-green{
+    position: sticky;
+    top: 37rem;
+    left: 82rem;
+    background-color: #5c9f24;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    }
